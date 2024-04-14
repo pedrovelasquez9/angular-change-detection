@@ -1,0 +1,10 @@
+<h2>{{ childData.label }}</h2>
+<button (click)="fireCD()">Click me!</button>
+<span>{{ visualizeChangeDetection() }} </span>
+
+<div class="child-component">
+  <app-level-2
+    *ngFor="let data of childData.childNodes"
+    [childData]="data"
+  ></app-level-2>
+</div>
